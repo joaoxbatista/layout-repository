@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Repositório institucional</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="app">
+		<div class="container">
+			<div class="row">
+			<!-- Div Main Content -->
+			<div class="main-content col-md-8">
+				<!-- Filtragem -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Painel de Busca</h3>
+					</div>
+					
+					<div class="panel-body">
+
+						<!-- Primeira parte de Busca -->
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="">Buscar em:</label>
+									<select class="form-control">
+									  <option>Some option</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-9">
+								<div class="form-group">
+									<div class="form-group">
+										<label for="">Por:</label>
+										<input type="text" class="form-control" placeholder="Texto para realizar busca">
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-3">
+								<button class="btn btn-block btn-primary fx-bottom">
+									<span class="glyphicon glyphicon-search"></span>
+									Buscar
+								</button>
+							</div>
+						</div><!-- Primeira parte de Busca -->
+						
+						<div class="v-separator"></div>
+
+						<!-- Adição de filtros -->
+						<div class="row">
+							<div class="col-md-12">
+								<div class="subtitle-panel"> 
+									<span class="glyphicon glyphicon-filter"></span>
+									Criar Filtro
+								</div>
+								
+								<div class="alert alert-warning alert-dismissible">
+									 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									Utilizar filtros para refinar o resultado de busca
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-md-3">
+										<div class="form-group">
+											<label for="">Tipo do documento</label>
+											<select class="form-control">
+												<option value="type">Tipo de Documento</option>
+												<option value="title">Título</option>
+												<option value="author">Autor</option>
+												<option value="advisor">Orientador</option>
+												<option value="referees">Membros da Banca</option>
+												<option value="contributor">Autoria</option>
+												<option value="contributorid">Identificador de Autoria</option>
+												<option value="abstract">Resumo ou Abstract</option>
+												<option value="subject">Assunto</option>
+												<option value="cnpq">CNPq</option>
+												<option value="dateIssued">Data de publicação</option>
+												<option value="available">Liberação para Acesso</option>
+												<option value="access">Acesso</option>
+												<option value="publisher">Instituição</option>
+												<option value="initials">Sigla da Instituição</option>
+												<option value="program">Programa</option>
+												<option value="department">Departamento</option>
+												<option value="sponsorship">Agência de Fomento</option>
+												<option value="format">Formato do Arquivo</option>
+												<option value="all">Todos os campos</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<label for="">Condições</label>
+											<select class="form-control">
+												<option value="type">Tipo de Documento</option>
+												<option value="title">Título</option>
+												<option value="author">Autor</option>
+												<option value="advisor">Orientador</option>
+												<option value="referees">Membros da Banca</option>
+												<option value="contributor">Autoria</option>
+												<option value="contributorid">Identificador de Autoria</option>
+												<option value="abstract">Resumo ou Abstract</option>
+												<option value="subject">Assunto</option>
+												<option value="cnpq">CNPq</option>
+												<option value="dateIssued">Data de publicação</option>
+												<option value="available">Liberação para Acesso</option>
+												<option value="access">Acesso</option>
+												<option value="publisher">Instituição</option>
+												<option value="initials">Sigla da Instituição</option>
+												<option value="program">Programa</option>
+												<option value="department">Departamento</option>
+												<option value="sponsorship">Agência de Fomento</option>
+												<option value="format">Formato do Arquivo</option>
+												<option value="all">Todos os campos</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for="">Buscar por</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-3">
+										<button class="btn btn-success btn-block fx-bottom">
+											<span class="glyphicon glyphicon-plus"></span>
+											Adicionar
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Adição de filtros -->
+
+						<div class="v-separator"></div>	
+						
+						<!-- Lista de filtros -->
+						<div class="row">
+							<div class="col-md-12">
+								<div class="subtitle-panel"> 
+									<span class="glyphicon glyphicon-list"></span>
+									Filtros Aplicados
+								</div>
+							</div>
+
+							<div class="col-md-12 filter">
+								<div class="row">
+									<div class="col-md-3">
+										<div class="form-group">
+											<label for="">Tipo do documento</label>
+											<select class="form-control">
+												<option value="type">Tipo de Documento</option>
+												<option value="title">Título</option>
+												<option value="author">Autor</option>
+												<option value="advisor">Orientador</option>
+												<option value="referees">Membros da Banca</option>
+												<option value="contributor">Autoria</option>
+												<option value="contributorid">Identificador de Autoria</option>
+												<option value="abstract">Resumo ou Abstract</option>
+												<option value="subject">Assunto</option>
+												<option value="cnpq">CNPq</option>
+												<option value="dateIssued">Data de publicação</option>
+												<option value="available">Liberação para Acesso</option>
+												<option value="access">Acesso</option>
+												<option value="publisher">Instituição</option>
+												<option value="initials">Sigla da Instituição</option>
+												<option value="program">Programa</option>
+												<option value="department">Departamento</option>
+												<option value="sponsorship">Agência de Fomento</option>
+												<option value="format">Formato do Arquivo</option>
+												<option value="all">Todos os campos</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<label for="">Condições</label>
+											<select class="form-control">
+												<option value="equals" selected="selected">Iguais</option>
+												<option value="contains">Contém</option>
+												<option value="authority">Identificado</option>
+												<option value="notequals">Diferentes</option>
+												<option value="notcontains">Não contém</option>
+												<option value="notauthority">Não identificado</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for="">Buscar por</label>
+											<input type="text" value="alguma coisa" class="form-control">
+										</div>
+									</div>
+
+									<div class="col-md-3">
+										<button class="btn-block btn-danger btn fx-bottom">
+											<span class="glyphicon glyphicon-trash"></span>
+											Remover
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Lista de filtros -->				
+
+					</div>
+				</div> <!-- Filtragem -->
+
+				<!-- Lista de Resultados -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Resutados</h3>
+					</div>
+
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+										<th width="100px">Data do Documento</th>
+										<th>Título</th>
+										<th width="180px">Autor(es)</th>
+										<th width="100px">Tipo</th>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>24-Abr-2008</td>
+										<td>A intervenção didática em produções escritas de jovens e adultos</td>
+										<td>Tavares, Ana Verônica Lima</td>
+										<td>Dissertação</td>
+									</tr>
+
+									<tr>
+										<td>24-Abr-2008</td>
+										<td>A intervenção didática em produções escritas de jovens e adultos</td>
+										<td>Tavares, Ana Verônica Lima</td>
+										<td>Dissertação</td>
+									</tr>
+
+									<tr>
+										<td>24-Abr-2008</td>
+										<td>A intervenção didática em produções escritas de jovens e adultos</td>
+										<td>Tavares, Ana Verônica Lima</td>
+										<td>Dissertação</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="panel-footer">
+						<nav aria-label="Page navigation">
+						  <ul class="pagination">
+						    <li>
+						      <a href="#" aria-label="Previous">
+						        <span aria-hidden="true">&laquo;</span>
+						      </a>
+						    </li>
+						    <li class="active"><a href="#">1</a></li>
+						    <li><a href="#">2</a></li>
+						    <li><a href="#">3</a></li>
+						    <li><a href="#">4</a></li>
+						    <li><a href="#">5</a></li>
+						    <li>
+						      <a href="#" aria-label="Next">
+						        <span aria-hidden="true">&raquo;</span>
+						      </a>
+						    </li>
+						  </ul>
+						</nav>
+					</div>
+				</div>
+				<!-- Lista de Resultados -->
+
+			</div> <!-- Div Main Content -->
+
+			
+			<!-- Div Side Topics -->
+			<div class="side-topics col-md-4">
+				<div class="row">
+					
+					<!-- panel Topic -->
+					<div class="col-md-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">Lista de Categorias 1</h3>
+							</div>
+							<div class="panel-body" style="padding: 0px;">
+								<ul class="list-group">
+								  <li class="list-group-item">
+								    <span class="badge">12</span>
+								    Categoria 1
+								  </li>
+								  <li class="list-group-item">
+								    <span class="badge">21</span>
+								    Categoria 2
+								  </li>
+								  <li class="list-group-item">
+								    <span class="badge">41</span>
+								    Categoria 3
+								  </li>
+								  <li class="list-group-item">
+								    <span class="badge">6</span>
+								    Categoria 4
+								  </li>
+								  <li class="list-group-item">
+								    <span class="badge">84</span>
+								    Categoria 5
+								  </li>
+								</ul>
+							</div>
+
+							<div class="panel-footer" style="margin-top: -20px; padding-top: 4px;">
+								<div class="row">
+									<div class="col-md-6">
+										<button class="btn btn-block fx-bottom btn-default" disabled>
+											<span class="glyphicon glyphicon-arrow-left"></span>
+											Voltar
+										</button>
+									</div>
+									<div class="col-md-6">
+										<button class="btn btn-block fx-bottom btn-default">
+											<span class="glyphicon glyphicon-arrow-right"></span>
+											Proximo
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- panel Topic -->
+
+					<!-- panel Topic -->
+					<div class="col-md-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">Lista de Categorias 2</h3>
+							</div>
+							<div class="panel-body" style="padding: 0px;">
+								<ul class="list-group">
+								  <li class="list-group-item">
+								    <span class="badge">12</span>
+								    Categoria 1
+								  </li>
+								  <li class="list-group-item">
+								    <span class="badge">21</span>
+								    Categoria 2
+								  </li>
+								  <li class="list-group-item">
+								    <span class="badge">41</span>
+								    Categoria 3
+								  </li>
+								  <li class="list-group-item">
+								    <span class="badge">6</span>
+								    Categoria 4
+								  </li>
+								  <li class="list-group-item">
+								    <span class="badge">84</span>
+								    Categoria 5
+								  </li>
+								</ul>
+							</div>
+
+							<div class="panel-footer" style="margin-top: -20px; padding-top: 4px;">
+								<div class="row">
+									<div class="col-md-6">
+										<button class="btn btn-block fx-bottom btn-default" disabled>
+											<span class="glyphicon glyphicon-arrow-left"></span>
+											Voltar
+										</button>
+									</div>
+									<div class="col-md-6">
+										<button class="btn btn-block fx-bottom btn-default">
+											<span class="glyphicon glyphicon-arrow-right"></span>
+											Proximo
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- panel Topic -->
+
+				</div>
+			</div><!-- Div Main Content -->
+
+			</div>
+		</div>
+	</div>
+
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
